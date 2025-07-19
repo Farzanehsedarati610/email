@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Farzaneh Admin Mailbox</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <title>📨 Symbolic Email Console</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="container mt-4">
-    <h2>📨 Admin Email Console</h2>
-    <input type="text" class="form-control" id="msgInput" placeholder="Type your message..." />
-    <button class="btn btn-primary mt-2" onclick="sendEmail()">Send</button>
-    <hr>
-    <pre id="inboxLog" class="bg-light p-3"></pre>
-  </div>
+  <h1>Admin Mailbox – you@sony-dadc.com</h1>
+
+  <!-- Compose Email -->
+  <section>
+    <textarea id="compose" placeholder="Write your message…"></textarea>
+    <button onclick="sendMessage()">Send</button>
+  </section>
+
+  <!-- Inbox -->
+  <section>
+    <h2>Inbox</h2>
+    <ul id="inboxList"></ul>
+  </section>
+
+  <!-- Outbox -->
+  <section>
+    <h2>Sent Messages</h2>
+    <ul id="sentList"></ul>
+  </section>
 </body>
 </html>
 
